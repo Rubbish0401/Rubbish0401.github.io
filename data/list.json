@@ -1,7 +1,7 @@
 [
 	{
 		"title": "",
-		"description": "",
+		"descriptions": "",
 		"links": [
 			{
 				"title": "",
@@ -12,7 +12,7 @@
 
 	{
 		"title": "𝕏",
-		"description": "以前はTwitterなどと呼ばれていた。いつもくだらないことを呟く。そのために存在する。",
+		"descriptions": "以前はTwitterなどと呼ばれていた。いつもくだらないことを呟く。そのために存在する。",
 		"links": [
 			{
 				"title": "𝕏",
@@ -23,7 +23,7 @@
 
 	{
 		"title": "Time Diff Display",
-		"description": "指定した時間と今の差を表示するアプリケーション。",
+		"descriptions": "指定した時間と今の差を表示するアプリケーション。",
 		"links": [
 			{
 				"title": "Time Diff Display",
@@ -34,7 +34,7 @@
 
 	{
 		"title": "GitHub",
-		"description": "なんかプログラムのソースコードを保存したり管理したりするサービス。このウェブサイトもそこに保存してあり、なおかつ GitHub Pages という連携サービスから公開されている。",
+		"descriptions": "なんかプログラムのソースコードを保存したり管理したりするサービス。このウェブサイトもそこに保存してあり、なおかつ GitHub Pages という連携サービスから公開されている。",
 		"links": [
 			{
 				"title": "GitHub",
@@ -45,7 +45,7 @@
 
 	{
 		"title": "マシュマロ",
-		"description": "特定の相手に匿名でメッセージを送れるサービス。匿名なら何を言っても心配ないよね！",
+		"descriptions": "特定の相手に匿名でメッセージを送れるサービス。匿名なら何を言っても心配ないよね！",
 		"links": [
 			{
 				"title": "ゴミにマシュマロを投げる",
