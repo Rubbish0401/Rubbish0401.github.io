@@ -17,6 +17,19 @@ function showDescription(data) {
 	let pane = document.createElement("div");
 	pane.classList.add("pane");
 
+	let titlePane = document.createElement("div");
+	titlePane.style.display = "flex";
+	titlePane.style.flexDirection = "row";
+	titlePane.style.alignItems = "center";
+
+	let backBtn = document.createElement("img");
+	backBtn.src = "images/arrow.svg";
+	backBtn.classList.add("btn-back");
+	backBtn.addEventListener("click", function (event) {
+		document.body.classList.remove("show-details");
+		document.body.classList.add("show-list");
+	});
+
 	let title = document.createElement("p");
 	title.classList.add("title");
 	title.innerText = data.title;
@@ -39,7 +52,10 @@ function showDescription(data) {
 		links.appendChild(anchor)
 	}
 
-	pane.appendChild(title);
+	titlePane.appendChild(backBtn);
+	titlePane.appendChild(title);
+
+	pane.appendChild(titlePane);
 	pane.appendChild(descriptions);
 	pane.appendChild(links);
 
@@ -93,12 +109,6 @@ function showDescription(data) {
 			}
 		}
 	};
-
-	let backBtn = document.getElementById("btn-back");
-	backBtn.addEventListener("click", function (event) {
-		document.body.classList.remove("show-details");
-		document.body.classList.add("show-list");
-	});
 
 	request.open("GET", "https://rubbish0401.github.io/data/list.json", true);
 	request.send("");

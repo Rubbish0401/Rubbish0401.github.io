@@ -100,7 +100,10 @@ body{
 	padding: 4px;
 }
 
-#details-pane > .pane > .title{
+#details-pane > .pane > div > .title{
+	width: fit-content;
+	height: fit-content;
+
 	font-size: 32px;
 	color: #404040;
 
@@ -133,7 +136,7 @@ body{
 	border: none;
 }
 
-#btn-back{
+#details-pane > .pane > div > .btn-back{
 	display: none;
 }
 
@@ -169,18 +172,10 @@ body{
 		width: 100vw;
 	}
 
-	#btn-back{
+	#details-pane > .pane > div > .btn-back{
 		width: 32px;
 		height: 32px;
 
-		position: fixed;
-		bottom: 4px;
-		left: calc(100vw + 4px);
-
-		padding: 16px;
-
 		display: initial;
-		border-radius: 32px;
-		background: lightblue;
 	}
 }
