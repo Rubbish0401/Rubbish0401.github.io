@@ -37,6 +37,8 @@ body{
 
 	margin: 2px 0;
 	padding: 4px;
+	
+	overflow: hidden;
 }
 
 #list-pane > .list-item > *{
@@ -126,4 +128,54 @@ body{
 	height: fit-content;
 
 	border: none;
+}
+
+#btn-back{
+	display: none;
+}
+
+@media screen and (max-width: 480px) {
+	body{
+		width: 200vw;
+		transition: transform 1s ease-in;
+	}
+
+	body.show-list{
+		transform: translateX(0);
+	}
+
+	body.show-details{
+		transform: translateX(-100vw);
+	}
+
+	#list-pane{
+		max-width: 100vw;
+		width: calc(100vw - 8px);
+
+		margin: 0;
+	}
+
+	#list-pane > .list-item{
+		width: calc(100vw - 16px);
+	}
+
+	#details-pane{
+		max-width: 100vw;
+		width: 100vw;
+	}
+
+	#btn-back{
+		width: 32px;
+		height: 32px;
+
+		position: fixed;
+		bottom: 4px;
+		left: calc(100vw + 4px);
+
+		padding: 16px;
+
+		display: initial;
+		border-radius: 32px;
+		background: lightblue;
+	}
 }
