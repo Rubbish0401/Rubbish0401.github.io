@@ -140,7 +140,7 @@ body{
 	display: none;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 960px) {
 	body{
 		max-width: 200vw;
 		width: 200vw;
