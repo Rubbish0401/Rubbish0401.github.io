@@ -4,6 +4,7 @@
 		"items": [
 			{
 				"title": "",
+				"icon": "",
 				"descriptions": "",
 				"links": [
 					{
@@ -19,6 +20,7 @@
 		"items": [
 			{
 				"title": "Time Diff Display",
+				"icon": "",
 				"descriptions": "指定した時間と今の差を表示するアプリケーション。",
 				"links": [
 					{
@@ -33,16 +35,19 @@
 			},
 			{
 				"title": "数値カウンター",
+				"icon": "",
 				"descriptions": "未開発<br>クリックでカウントできるようにする？カウントダウンタイプもありかも。",
 				"links": []
 			},
 			{
 				"title": "予定表つくるんじゃー",
+				"icon": "",
 				"descriptions": "未開発<br>VTuberの週間予定表を作るツール。<br>レイアウトのパターンをJSONかXMLで保存して共有できるようにしようかな。素材も丸々まとめてパッケージ化するのもありかも。",
 				"links": []
 			},
 			{
 				"title": "見てるVTuberまとめたー",
+				"icon": "",
 				"descriptions": "未開発<br>サービスじゃないけど見てるVTuber共の情報やリンクをスタイリッシュに並べられたらいいなと思ってます。はい。",
 				"links": []
 			}
@@ -53,6 +58,7 @@
 		"items": [
 			{
 				"title": "𝕏",
+				"icon": "",
 				"descriptions": "以前はTwitterなどと呼ばれていた。いつもくだらないことを呟く。そのために存在する。",
 				"links": [
 					{
@@ -63,6 +69,7 @@
 			},
 			{
 				"title": "GitHub",
+				"icon": "",
 				"descriptions": "なんかプログラムのソースコードを保存したり管理したりするサービス。このウェブサイトもそこに保存してあり、なおかつ GitHub Pages という連携サービスから公開されている。",
 				"links": [
 					{
@@ -73,6 +80,7 @@
 			},
 			{
 				"title": "マシュマロ",
+				"icon": "",
 				"descriptions": "特定の相手に匿名でメッセージを送れるサービス。匿名なら何を言っても心配ないよね！",
 				"links": [
 					{
@@ -88,6 +96,7 @@
 		"items": [
 			{
 				"title": "堕罪來夢",
+				"icon": "https://pbs.twimg.com/profile_images/1790630766172573697/SZE8BCgE_400x400.jpg",
 				"descriptions": "かわいい。かなり好き。<br>毎朝Minecraftの配信をしている。配信時間が長すぎておかしいと思う。<br>睡眠を複数回に分けて毎日3回も行っており、ここが一番ヒトを超越していると思う。すごいと言うかなんか怖い。<br><br>絵が描けるらしく、たまに描いた絵を見せてくれる。絵もかわいい。",
 				"links": [
 					{
@@ -106,6 +115,7 @@
 			},
 			{
 				"title": "花園えりか",
+				"icon": "",
 				"descriptions": "面白い。ウケる。話題からして年上だと思う。<br><a href='https://x.com/jorian0702'>ジョリアン</a>って人がいつもいる。",
 				"links": [
 					{
@@ -120,6 +130,7 @@
 			},
 			{
 				"title": "緋華いゆ",
+				"icon": "https://pbs.twimg.com/profile_images/1816501897744039937/_9OdhYxx_400x400.jpg",
 				"descriptions": "黒猫。スロットやってるらしい。酒とたばこにはハマらないでくれると嬉しい。",
 				"links": [
 					{
@@ -138,6 +149,7 @@
 			},
 			{
 				"title": "無田虚(むだうつろ)",
+				"icon": "https://pbs.twimg.com/profile_images/1790709777120792576/GdHTmLJU_400x400.jpg",
 				"descriptions": "高校数学の問題に触れる配信を一定期間していて、そこから見始めた。うつぽよラジオも割と好き。<br>なんぎちゃんって名前でVTuber以外の活動をしているらしい。絵を描いたりLive2Dを弄ったり。",
 				"links": [
 					{
@@ -172,6 +184,7 @@
 			},
 			{
 				"title": "獺もちゃ",
+				"icon": "https://pbs.twimg.com/profile_images/1816770843365855232/GMSHLn_Q_400x400.jpg",
 				"descriptions": "もちゃ。堕罪さんの妹。時々見てる。<br>獺はかわうそって読むらしい。",
 				"links": [
 					{
@@ -186,6 +199,7 @@
 			},
 			{
 				"title": "こぱ",
+				"icon": "https://pbs.twimg.com/profile_images/1785533687586799616/w5Db7ZHh_400x400.jpg",
 				"descriptions": "時々見る。バイリンガル？ってやつらしく日本語と英語で話してる。いつも配信が多言語であふれてる。<br>絵が描けるらしく、結構かわいかった。スイカバーを食べてるあれが気に入ってる。<br><span style='opacity: 0.5'>あと胸がめっっっっっっっちゃデカい。</span>",
 				"links": [
 					{
@@ -216,6 +230,7 @@
 			},
 			{
 				"title": "空梅雨れね",
+				"icon": "https://pbs.twimg.com/profile_images/1771765766507069440/UCJbvg9E_400x400.jpg",
 				"descriptions": "堕罪さんの妹。まだYouTubeでの活動はなされていない。ちょっと動画あるけど。<br>歌がうまい。最初に見たのが少女レイのShortだった。絵も描けるらしい。<br>被ってる冠みたいなのが綺麗でかわいいと思う。<br>ちなみに空梅雨はからつゆと読む。",
 				"links": [
 					{
@@ -238,6 +253,7 @@
 			},
 			{
 				"title": "姫乃美花",
+				"icon": "https://pbs.twimg.com/profile_images/1785302315702054912/tj4hD-BQ_400x400.jpg",
 				"descriptions": "堕罪さんの妹。YouTube稼働前だけど動画が数本ある。歌ってた。<br>今は毎日？なのか𝕏で朝の挨拶をしている。まだ知らないことが多い。",
 				"links": [
 					{

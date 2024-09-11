@@ -32,6 +32,10 @@ function showDescription(data) {
 		back.classList.add("show-list");
 	});
 
+	let icon = document.createElement("img");
+	icon.classList.add("icon");
+	if(data.icon) icon.src = data.icon;
+
 	let title = document.createElement("p");
 	title.classList.add("title");
 	title.innerText = data.title;
@@ -53,7 +57,6 @@ function showDescription(data) {
 		btn.innerText = link.title;
 		btn.addEventListener("mouseover", function (event) {
 			btn.style.background = `hsl(${themeHue}deg, 50%, 75%)`;
-			showDescription(itemData);
 		});
 		btn.addEventListener("mouseout", function (event) {
 			btn.style.background = `hsl(${themeHue}deg, 50%, 70%)`;
@@ -65,6 +68,7 @@ function showDescription(data) {
 	}
 
 	titlePane.appendChild(backBtn);
+	if(data.icon && data.icon.length > 0) titlePane.appendChild(icon);
 	titlePane.appendChild(title);
 
 	pane.appendChild(titlePane);
