@@ -133,6 +133,7 @@ body{
 #details-pane > .pane{
 	width: calc(100% - 8px);
 	height: fit-content;
+	min-height: calc(100vh - 24px);;
 	
 	display: block;
 
