@@ -46,7 +46,17 @@ function showDescription(data) {
 		anchor.target = "_blank";
 
 		let btn = document.createElement("button");
+		btn.style.background = `hsl(${themeHue}deg, 50%, 70%)`;
+		btn.style.color = "hsl(0deg, 0%, 30%)";
 		btn.innerText = link.title;
+		btn.addEventListener("mouseover", function (event) {
+			btn.style.background = `hsl(${themeHue}deg, 50%, 75%)`;
+			showDescription(itemData);
+		});
+		btn.addEventListener("mouseout", function (event) {
+			btn.style.background = `hsl(${themeHue}deg, 50%, 70%)`;
+		});
+
 
 		anchor.appendChild(btn);
 		links.appendChild(anchor)
@@ -108,7 +118,7 @@ function showDescription(data) {
 
 					let descriptions = document.createElement("p");
 					descriptions.classList.add("descriptions");
-					descriptions.innerText = itemData.descriptions;
+					descriptions.innerText = itemData.descriptions.replace(/<(".*?"|'.*?'|[^'"])*?>/g, "");
 
 					item.appendChild(title);
 					item.appendChild(descriptions);
