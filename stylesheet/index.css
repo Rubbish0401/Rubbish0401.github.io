@@ -58,7 +58,7 @@ body{
 }
 
 #list-pane > .list-item > *{
-	
+
 }
 
 #list-pane > .list-item > p.title{
@@ -176,7 +176,7 @@ body{
 		margin: 0;
 	}
 
-	#list-pane > .list-item{
+	#list-pane > *{
 		width: calc(100vw - 16px);
 	}
 
