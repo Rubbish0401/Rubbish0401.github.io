@@ -79,11 +79,11 @@ function showDescription(data) {
 }
 
 (function () {
-	document.body.style.background = `hsl(${themeHue}deg, 50%, 90%)`;
-
 	back = document.getElementById(ID_BACK)
 	list = document.getElementById(ID_LIST);
 	details = document.getElementById(ID_DETAILS);
+
+	list.style.background = `hsl(${themeHue}deg, 35%, 75%)`;
 
 	let request = new XMLHttpRequest();
 	request.onreadystatechange = function () {
@@ -94,7 +94,6 @@ function showDescription(data) {
 				let group = listData[i];
 
 				let groupName = document.createElement("p");
-				groupName.style.background = `hsl(${themeHue}deg, 50%, 90%)`;
 				groupName.classList.add("group-name");
 				groupName.innerText = group.name;
 				list.appendChild(groupName);
@@ -104,19 +103,11 @@ function showDescription(data) {
 
 					let item = document.createElement("div");
 					item.classList.add("list-item");
-					item.style.background = `hsl(${themeHue}deg, 50%, 90%)`;
 					item.addEventListener("click", function (event) {
 						showDescription(itemData);
 
 						back.classList.remove("show-list");
 						back.classList.add("show-details");
-					});
-					item.addEventListener("mouseover", function (event) {
-						item.style.background = `hsl(${themeHue}deg, 50%, 95%)`;
-						showDescription(itemData);
-					});
-					item.addEventListener("mouseout", function (event) {
-						item.style.background = `hsl(${themeHue}deg, 50%, 90%)`;
 					});
 
 					let title = document.createElement("p");

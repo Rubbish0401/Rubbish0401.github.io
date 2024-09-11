@@ -54,7 +54,6 @@ body{
 	grid-row: 1;
 	grid-column: 1;
 
-	background: #A0A0A0;
 	overflow-y: auto;
 }
 
@@ -66,6 +65,8 @@ body{
 	padding: 4px;
 	
 	user-select: none;
+
+	background: #FFFFFF;
 }
 
 #list-pane > .group-name{
@@ -85,8 +86,8 @@ body{
 	overflow: hidden;
 }
 
-#list-pane > .list-item > *{
-
+#list-pane > .list-item:hover{
+	background: #E8E8E8;
 }
 
 #list-pane > .list-item > p.title{
