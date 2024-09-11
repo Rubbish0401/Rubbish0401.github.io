@@ -1,7 +1,7 @@
 const ID_LIST = "list-pane";
 const ID_DETAILS = "details-pane";
 
-const themeHue = 150; // 0 to 255
+const themeHue = 165; // 0 to 255
 
 var list;
 var listItems = [];

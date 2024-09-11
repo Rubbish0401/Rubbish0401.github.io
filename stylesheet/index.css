@@ -34,7 +34,7 @@ body{
 	padding: 2px 4px;
 
 	background: #A0A0A0;
-	overflow-y: auto;
+	overflow-y: scroll;
 }
 
 #list-pane > *{
@@ -156,6 +156,8 @@ body{
 	justify-content: flex-start;
 	align-items: flex-start;
 
+	margin-top: 16px;
+
 	overflow-x: wrap;
 }
 
@@ -180,7 +182,7 @@ body{
 		max-width: 200vw;
 		width: 200vw;
 		
-		transition: transform 1s ease-in;
+		transition: transform 0.5s ease-out;
 	}
 
 	body.show-list{
