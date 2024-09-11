@@ -61,7 +61,7 @@ body{
 	width: calc(100% - 16px);
 	height: fit-content;
 	
-	margin: 4px auto;
+	margin: 0 auto;
 	padding: 4px;
 	
 	user-select: none;
