@@ -137,6 +137,7 @@ body{
 	display: block;
 
 	padding: 4px;
+	margin-bottom: 16px;
 }
 
 #details-pane > .pane > *{
