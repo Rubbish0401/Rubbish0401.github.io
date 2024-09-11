@@ -1,8 +1,6 @@
 *{
 	font-family: "Open Sans";
 	scrollbar-width: 0;
-
-	touch-action: none;
 }
 
 *::-webkit-scrollbar{
@@ -130,8 +128,6 @@ body{
 	background: transparent;
 
 	overflow-y: auto;
-
-	touch-action: initial;
 }
 
 #details-pane > .pane{
