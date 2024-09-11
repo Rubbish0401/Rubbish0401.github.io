@@ -1,8 +1,10 @@
+const ID_BACK = "back";
 const ID_LIST = "list-pane";
 const ID_DETAILS = "details-pane";
 
 const themeHue = 165; // 0 to 255
 
+var back;
 var list;
 var listItems = [];
 var details;
@@ -26,8 +28,8 @@ function showDescription(data) {
 	backBtn.src = "images/arrow.svg";
 	backBtn.classList.add("btn-back");
 	backBtn.addEventListener("click", function (event) {
-		document.body.classList.remove("show-details");
-		document.body.classList.add("show-list");
+		back.classList.remove("show-details");
+		back.classList.add("show-list");
 	});
 
 	let title = document.createElement("p");
@@ -75,6 +77,7 @@ function showDescription(data) {
 (function () {
 	document.body.style.background = `hsl(${themeHue}deg, 50%, 85%)`;
 
+	back = document.getElementById(ID_BACK)
 	list = document.getElementById(ID_LIST);
 	details = document.getElementById(ID_DETAILS);
 
@@ -101,8 +104,8 @@ function showDescription(data) {
 					item.addEventListener("click", function (event) {
 						showDescription(itemData);
 
-						document.body.classList.remove("show-list");
-						document.body.classList.add("show-details");
+						back.classList.remove("show-list");
+						back.classList.add("show-details");
 					});
 					item.addEventListener("mouseover", function (event) {
 						item.style.background = `hsl(${themeHue}deg, 50%, 90%)`;
