@@ -161,6 +161,8 @@ body{
 	aspect-ratio: 1;
 	
 	border: 2px solid #FFFFFF;
+
+	user-select: none;
 }
 
 #details-pane > .pane > div > .title{
@@ -215,13 +217,14 @@ body{
 
 #details-pane > .pane > div > .btn-back{
 	display: none;
+	user-select: none;
 }
 
 @media screen and (max-width: 960px) {
 	#back{
 		max-width: 200vw;
 		
-		grid-template-columns: 100vw;
+		grid-template-columns: 100vw 100vw;
 
 		transition: transform 0.5s ease-out;
 	}
