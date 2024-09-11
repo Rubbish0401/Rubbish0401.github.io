@@ -185,7 +185,7 @@ body{
 
 #details-pane > .pane > .links > a > button{
 	width: max-content;
-	height: min-content;
+	height: fit-content;
 
 	margin-right: 4px;
 	margin-bottom: 4px;
