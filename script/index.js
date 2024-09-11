@@ -75,7 +75,7 @@ function showDescription(data) {
 }
 
 (function () {
-	document.body.style.background = `hsl(${themeHue}deg, 50%, 85%)`;
+	document.body.style.background = `hsl(${themeHue}deg, 50%, 90%)`;
 
 	back = document.getElementById(ID_BACK)
 	list = document.getElementById(ID_LIST);
@@ -90,7 +90,7 @@ function showDescription(data) {
 				let group = listData[i];
 
 				let groupName = document.createElement("p");
-				groupName.style.background = `hsl(${themeHue}deg, 50%, 85%)`;
+				groupName.style.background = `hsl(${themeHue}deg, 50%, 90%)`;
 				groupName.classList.add("group-name");
 				groupName.innerText = group.name;
 				list.appendChild(groupName);
@@ -100,7 +100,7 @@ function showDescription(data) {
 
 					let item = document.createElement("div");
 					item.classList.add("list-item");
-					item.style.background = `hsl(${themeHue}deg, 50%, 85%)`;
+					item.style.background = `hsl(${themeHue}deg, 50%, 90%)`;
 					item.addEventListener("click", function (event) {
 						showDescription(itemData);
 
@@ -108,11 +108,11 @@ function showDescription(data) {
 						back.classList.add("show-details");
 					});
 					item.addEventListener("mouseover", function (event) {
-						item.style.background = `hsl(${themeHue}deg, 50%, 90%)`;
+						item.style.background = `hsl(${themeHue}deg, 50%, 95%)`;
 						showDescription(itemData);
 					});
 					item.addEventListener("mouseout", function (event) {
-						item.style.background = `hsl(${themeHue}deg, 50%, 85%)`;
+						item.style.background = `hsl(${themeHue}deg, 50%, 90%)`;
 					});
 
 					let title = document.createElement("p");
