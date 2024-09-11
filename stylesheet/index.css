@@ -1,6 +1,8 @@
 *{
 	font-family: "Open Sans";
 	scrollbar-width: 0;
+
+	touch-action: none;
 }
 
 *::-webkit-scrollbar{
@@ -21,6 +23,7 @@ body{
 }
 
 #back{
+	max-height: 100vh;
 	width: 100vw;
 	height: 100vh;
 
