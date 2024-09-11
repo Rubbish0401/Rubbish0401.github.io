@@ -248,6 +248,10 @@ body{
 	#list-pane > *{
 		width: calc(100vw - 16px);
 	}
+	
+	#list-pane > .group-name{
+		text-align: center;
+	}
 
 	#details-pane{
 		max-width: 100vw;
