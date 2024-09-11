@@ -14,7 +14,6 @@
 			}
 		]
 	},
-
 	{
 		"name": "Services",
 		"items": [
@@ -25,12 +24,30 @@
 					{
 						"title": "Time Diff Display",
 						"url": "https://rubbish0401.github.io/TimeDiffDisplay/"
+					},
+					{
+						"title": "GitHub",
+						"url": "https://github.com/Rubbish0401/TimeDiffDisplay"
 					}
 				]
+			},
+			{
+				"title": "数値カウンター",
+				"descriptions": "未開発<br>クリックでカウントできるようにする？カウントダウンタイプもありかも。",
+				"links": []
+			},
+			{
+				"title": "予定表つくるんじゃー",
+				"descriptions": "未開発<br>VTuberの週間予定表を作るツール。<br>レイアウトのパターンをJSONかXMLで保存して共有できるようにしようかな。素材も丸々まとめてパッケージ化するのもありかも。",
+				"links": []
+			},
+			{
+				"title": "見てるVTuberまとめたー",
+				"descriptions": "未開発<br>サービスじゃないけど見てるVTuber共の情報やリンクをスタイリッシュに並べられたらいいなと思ってます。はい。",
+				"links": []
 			}
 		]
 	},
-
 	{
 		"name": "SNS",
 		"items": [
@@ -44,7 +61,6 @@
 					}
 				]
 			},
-
 			{
 				"title": "GitHub",
 				"descriptions": "なんかプログラムのソースコードを保存したり管理したりするサービス。このウェブサイトもそこに保存してあり、なおかつ GitHub Pages という連携サービスから公開されている。",
@@ -55,7 +71,6 @@
 					}
 				]
 			},
-
 			{
 				"title": "マシュマロ",
 				"descriptions": "特定の相手に匿名でメッセージを送れるサービス。匿名なら何を言っても心配ないよね！",
@@ -63,6 +78,183 @@
 					{
 						"title": "ゴミにマシュマロを投げる",
 						"url": "https://marshmallow-qa.com/btjjy8o3ozjpuku"
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "見てるVTuber",
+		"items": [
+			{
+				"title": "堕罪來夢",
+				"descriptions": "かわいい。かなり好き。<br>毎朝Minecraftの配信をしている。配信時間が長すぎておかしいと思う。<br>睡眠を複数回に分けて毎日3回も行っており、ここが一番ヒトを超越していると思う。すごいと言うかなんか怖い。<br><br>絵が描けるらしく、たまに描いた絵を見せてくれる。絵もかわいい。",
+				"links": [
+					{
+						"title": "YouTube",
+						"url": "https://www.youtube.com/@Dazai_Ram"
+					},
+					{
+						"title": "𝕏(旧Twitter)",
+						"url": "https://x.com/Dazai_Ram"
+					},
+					{
+						"title": "マシュマロ",
+						"url": "https://marshmallow-qa.com/f5zfhsytc5q22en"
+					}
+				]
+			},
+			{
+				"title": "花園えりか",
+				"descriptions": "面白い。ウケる。話題からして年上だと思う。<br><a href='https://x.com/jorian0702'>ジョリアン</a>って人がいつもいる。",
+				"links": [
+					{
+						"title": "YouTube",
+						"url": "https://www.youtube.com/@skr__usg"
+					},
+					{
+						"title": "𝕏(旧Twitter)",
+						"url": "https://x.com/skr__usg"
+					},
+					{
+						"title": "",
+						"url": ""
+					}
+				]
+			},
+			{
+				"title": "緋華いゆ",
+				"descriptions": "黒猫。スロットやってるらしい。酒とたばこにはハマらないでくれると嬉しい。",
+				"links": [
+					{
+						"title": "YouTube",
+						"url": "https://www.youtube.com/@Hibana-Iyu"
+					},
+					{
+						"title": "𝕏(旧Twitter)",
+						"url": "https://x.com/HibanaIyu"
+					},
+					{
+						"title": "マシュマロ",
+						"url": "https://marshmallow-qa.com/meozjgl4jnhjhak"
+					}
+				]
+			},
+			{
+				"title": "無田虚(むだうつろ)",
+				"descriptions": "高校数学の問題に触れる配信を一定期間していて、そこから見始めた。うつぽよラジオも割と好き。<br>なんぎちゃんって名前でVTuber以外の活動をしているらしい。絵を描いたりLive2Dを弄ったり。",
+				"links": [
+					{
+						"title": "YouTube",
+						"url": "https://www.youtube.com/@mudaU26"
+					},
+					{
+						"title": "おさかなチャーハン(サブチャンネル)",
+						"url": "https://www.youtube.com/@OsakanaChahan"
+					},
+					{
+						"title": "𝕏(旧Twitter)",
+						"url": "https://x.com/mudenkyo"
+					},
+					{
+						"title": "Twitch",
+						"url": "https://www.twitch.tv/muda_utsu"
+					},
+					{
+						"title": "マシュマロ",
+						"url": "https://marshmallow-qa.com/utsuro_dayo"
+					},
+					{
+						"title": "なんぎちゃんの𝕏",
+						"url": "https://x.com/nan_gi_dana"
+					},
+					{
+						"title": "Lit.Link",
+						"url": "https://lit.link/en/mudenkyo"
+					}
+				]
+			},
+			{
+				"title": "獺もちゃ",
+				"descriptions": "もちゃ。堕罪さんの妹。時々見てる。<br>獺はかわうそって読むらしい。",
+				"links": [
+					{
+						"title": "YouTube",
+						"url": "https://www.youtube.com/@kawauso-mocha"
+					},
+					{
+						"title": "𝕏(旧Twitter)",
+						"url": "https://x.com/motimotimo2020"
+					},
+					{
+						"title": "",
+						"url": ""
+					}
+				]
+			},
+			{
+				"title": "こぱ",
+				"descriptions": "時々見る。バイリンガル？ってやつらしく日本語と英語で話してる。いつも配信が多言語であふれてる。<br>絵が描けるらしく、結構かわいかった。スイカバーを食べてるあれが気に入ってる。<br><span style='opacity: 0.5'>あと胸がめっっっっっっっちゃデカい。</span>",
+				"links": [
+					{
+						"title": "YouTube",
+						"url": "https://www.youtube.com/@kopa_kopa_kopa"
+					},
+					{
+						"title": "𝕏(旧Twitter)",
+						"url": "https://x.com/kopa_kopa_kopa"
+					},
+					{
+						"title": "TikTok",
+						"url": "https://www.tiktok.com/@kopa_kopa_kopavt"
+					},
+					{
+						"title": "イラスト垢(𝕏)",
+						"url": "https://x.com/chululalila"
+					},
+					{
+						"title": "マシュマロ",
+						"url": "https://marshmallow-qa.com/9apwbjo7onmn46m"
+					},
+					{
+						"title": "Lit.Link",
+						"url": "https://lit.link/en/kopakopakopa"
+					}
+				]
+			},
+			{
+				"title": "空梅雨れね",
+				"descriptions": "堕罪さんの妹。まだYouTubeでの活動はなされていない。ちょっと動画あるけど。<br>歌がうまい。最初に見たのが少女レイのShortだった。絵も描けるらしい。<br>被ってる冠みたいなのが綺麗でかわいいと思う。<br>ちなみに空梅雨はからつゆと読む。",
+				"links": [
+					{
+						"title": "YouTube",
+						"url": "https://www.youtube.com/@KaratuyuLene"
+					},
+					{
+						"title": "𝕏(旧Twitter)",
+						"url": "https://x.com/__1ene"
+					},
+					{
+						"title": "TikTok",
+						"url": "https://www.tiktok.com/@karatuyu_lene_"
+					},
+					{
+						"title": "Lit.Link",
+						"url": "https://lit.link/en/1ene"
+					}
+				]
+			},
+			{
+				"title": "姫乃美花",
+				"descriptions": "堕罪さんの妹。YouTube稼働前だけど動画が数本ある。歌ってた。<br>今は毎日？なのか𝕏で朝の挨拶をしている。まだ知らないことが多い。",
+				"links": [
+					{
+						"title": "YouTube",
+						"url": "https://www.youtube.com/@Himeno_Mika"
+					},
+					{
+						"title": "𝕏(旧Twitter)",
+						"url": "https://x.com/Himeno_Mika"
 					}
 				]
 			}
