@@ -74,38 +74,48 @@ function showDescription(data) {
 			listData = JSON.parse(request.response);
 
 			for (let i = 1; i < listData.length; i++) {
-				let itemData = listData[i];
+				let group = listData[i];
 
-				let item = document.createElement("div");
-				item.classList.add("list-item");
-				item.style.background = `hsl(${themeHue}deg, 50%, 85%)`;
-				item.addEventListener("click", function (event) {
-					showDescription(itemData);
+				let groupName = document.createElement("p");
+				groupName.style.background = `hsl(${themeHue}deg, 50%, 85%)`;
+				groupName.classList.add("group-name");
+				groupName.innerText = group.name;
+				list.appendChild(groupName);
 
-					document.body.classList.remove("show-list");
-					document.body.classList.add("show-details");
-				});
-				item.addEventListener("mouseover", function (event) {
-					item.style.background = `hsl(${themeHue}deg, 50%, 90%)`;
-					showDescription(itemData);
-				});
-				item.addEventListener("mouseout", function (event) {
+				for(let j = 0; j < group.items.length; j++){
+					let itemData = group.items[j];
+
+					let item = document.createElement("div");
+					item.classList.add("list-item");
 					item.style.background = `hsl(${themeHue}deg, 50%, 85%)`;
-				});
+					item.addEventListener("click", function (event) {
+						showDescription(itemData);
 
-				let title = document.createElement("p");
-				title.classList.add("title");
-				title.innerText = itemData.title;
+						document.body.classList.remove("show-list");
+						document.body.classList.add("show-details");
+					});
+					item.addEventListener("mouseover", function (event) {
+						item.style.background = `hsl(${themeHue}deg, 50%, 90%)`;
+						showDescription(itemData);
+					});
+					item.addEventListener("mouseout", function (event) {
+						item.style.background = `hsl(${themeHue}deg, 50%, 85%)`;
+					});
 
-				let descriptions = document.createElement("p");
-				descriptions.classList.add("descriptions");
-				descriptions.innerText = itemData.descriptions;
+					let title = document.createElement("p");
+					title.classList.add("title");
+					title.innerText = itemData.title;
 
-				item.appendChild(title);
-				item.appendChild(descriptions);
+					let descriptions = document.createElement("p");
+					descriptions.classList.add("descriptions");
+					descriptions.innerText = itemData.descriptions;
 
-				list.appendChild(item);
-				listItems.push(item);
+					item.appendChild(title);
+					item.appendChild(descriptions);
+
+					list.appendChild(item);
+					listItems.push(item);
+				}
 			}
 		}
 	};

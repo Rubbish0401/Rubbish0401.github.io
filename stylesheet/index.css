@@ -26,26 +26,39 @@ body{
 	display: flex;
 	flex-direction: column;
 
-	padding: 0 4px;
+	padding: 2px 4px;
 
 	background: #A0A0A0;
 }
 
-#list-pane > .list-item{
+#list-pane > *{
 	width: calc(30vw - 8px);
+	
+	margin: 2px 0;
+	padding: 4px;
+	
+	user-select: none;
+}
+
+#list-pane > .group-name{
+	height: fit-content;
+
+	font-size: 18px;
+	font-weight: bolder;
+	color: #808080;
+}
+
+#list-pane > .list-item{
 	height: 96px;
 
 	display: flex;
 	flex-direction: column;
-
-	margin: 2px 0;
-	padding: 4px;
 	
 	overflow: hidden;
 }
 
 #list-pane > .list-item > *{
-	user-select: none;
+	
 }
 
 #list-pane > .list-item > p.title{
