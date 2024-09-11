@@ -46,6 +46,10 @@ body{
 	user-select: none;
 }
 
+#list-pane:first-child{
+	margin-top: 0;
+}
+
 #list-pane > .group-name{
 	height: fit-content;
 
