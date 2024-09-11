@@ -50,6 +50,8 @@ body{
 
 	background: #A0A0A0;
 	overflow-y: scroll;
+
+	touch-action: initial;
 }
 
 #list-pane > *{
@@ -128,6 +130,8 @@ body{
 	background: transparent;
 
 	overflow-y: auto;
+
+	touch-action: initial;
 }
 
 #details-pane > .pane{
