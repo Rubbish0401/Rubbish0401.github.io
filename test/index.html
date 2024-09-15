@@ -1,0 +1,105 @@
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1" />
+		<meta charset="utf-8" />
+
+		<title>
+			てすと
+		</title>
+	</head>
+
+	<body>
+		<div id="back">
+			<div class="page"></div>
+			<div class="page"></div>
+			<div class="page"></div>
+			<div class="page"></div>
+			<div class="page"></div>
+			<div class="page"></div>
+		</div>
+
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+
+				box-sizing: border-box;
+				scrollbar-width: 0;
+				overscroll-behavior: none;
+				
+				touch-action: none;
+				overflow: hidden;
+			}
+
+			*::-webkit-scrollbar{
+				display: none;
+			}
+
+			body{
+				max-width: 100vw;
+				max-height: 100vh;
+				width: 100vw;
+				height: 100vh;
+			}
+
+			#back{
+				width: 600%;
+				height: 100%;
+
+				display: flex;
+				flex-flow: row nowrap;
+
+				transform: translateX(0);
+				transition: all 0.5s ease;
+			}
+
+			.page{
+				width: 100%;
+				height: 100%;
+
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				user-select: none;
+			}
+
+			.page-label{
+				width: fit-content;
+				height: fit-content;
+
+				font-size: 20vmax;
+			}
+		</style>
+
+		<script>
+			let pages = document.getElementsByClassName("page");
+			for(let i = 0; i < pages.length; i++){
+				let page = pages[i];
+
+				let label = document.createElement("span");
+				label.innerText = i;
+				label.classList.add("page-label")
+
+				page.appendChild(label);
+
+				let hue = 360 / pages.length * i;
+				page.style.background = `hsl(${hue}, 50%, 90%)`;
+
+				page.addEventListener("click", function(event){
+					let target = event.target;
+					let x = event.clientX, y = event.clientY;
+					let rateX = x / target.offsetWidth, rateY = y / target.offsetHeight;
+
+					let posX = i + Math.sign(rateX - 0.5);
+
+					if(posX * (posX - pages.length + 1) > 0) return;
+
+					document.getElementById("back").style.transform = `translateX(${- posX * 100}vw)`;
+				});
+			}
+		</script>
+	</body>
+
+</html>
