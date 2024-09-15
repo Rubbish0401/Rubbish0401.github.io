@@ -1,6 +1,11 @@
 *{
 	font-family: "Open Sans";
 	scrollbar-width: 0;
+
+	margin: 0;
+	padding: 0;
+
+	box-sizing: border-box;
 }
 
 *::-webkit-scrollbar{
@@ -32,9 +37,10 @@ body{
 	width: 100vw;
 	height: 100vh;
 
-	display: grid;
-	grid-template-rows: 100vh;
-	grid-template-columns: 30vw 70vw;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
 
 	padding: 0;
 	margin: 0;
@@ -50,15 +56,13 @@ body{
 	height: fit-content;
 
 	display:  block;
-	
-	grid-row: 1;
-	grid-column: 1;
+	padding: 0 4px;
 
 	overflow-y: auto;
 }
 
-#list-pane > *{
-	width: calc(100% - 16px);
+.list-item, .group-name{
+	width: 100%;
 	height: fit-content;
 	
 	margin: 0 auto;
@@ -69,7 +73,7 @@ body{
 	background: #FFFFFF;
 }
 
-#list-pane > .group-name{
+.group-name{
 	height: fit-content;
 
 	font-size: 18px;
@@ -77,20 +81,20 @@ body{
 	color: #808080;
 }
 
-#list-pane > .list-item{
+.list-item{
 	height: 96px;
 
 	display: flex;
 	flex-direction: column;
-	
+
 	overflow: hidden;
 }
 
-#list-pane > .list-item:hover{
+.list-item:hover{
 	background: #E8E8E8;
 }
 
-#list-pane > .list-item > p.title{
+.list-item > p.title{
 	max-width: 100%;
 	max-height: 44px;
 	width: fit-content;
@@ -106,7 +110,7 @@ body{
 	background: transparent;
 }
 
-#list-pane > .list-item > p.descriptions{
+.list-item > p.descriptions{
 	width: fit-content;
 	height: fit-content;
 	max-height: 44px;
@@ -115,11 +119,12 @@ body{
 	padding: 0;
 
 	font-size: 18px;
+	line-height: 22px;
 	color: #808080;
 	text-overflow: ellipsis;
+	background: transparent;
 	line-clamp: 2;
 	-webkit-line-clamp: 2;
-	background: transparent;
 }
 
 #details-pane{
@@ -129,18 +134,15 @@ body{
 
 	display: block;
 
-	grid-row: 1;
-	grid-column: 2;
-
 	background: transparent;
 
 	overflow-y: auto;
 }
 
 #details-pane > .pane{
-	width: calc(100% - 8px);
+	width: 100%;
 	height: fit-content;
-	min-height: calc(100vh - 24px);;
+	min-height: 100%;
 	
 	display: block;
 
@@ -224,8 +226,6 @@ body{
 	#back{
 		max-width: 200vw;
 		width: 200vw;
-		
-		grid-template-columns: 100vw 100vw;
 
 		transition: transform 0.5s ease-out;
 	}
@@ -235,7 +235,7 @@ body{
 	}
 
 	#back.show-details{
-		transform: translateX(-100vw);
+		transform: translateX(-50%);
 	}
 
 	#list-pane{
@@ -243,10 +243,6 @@ body{
 		width: 100vw;
 
 		margin: 0;
-	}
-
-	#list-pane > *{
-		width: calc(100vw - 16px);
 	}
 	
 	#list-pane > .group-name{
