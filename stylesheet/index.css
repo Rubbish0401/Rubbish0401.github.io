@@ -57,8 +57,13 @@ body{
 
 	display:  block;
 	padding: 0 4px;
+	padding-bottom: 128px;
 
 	overflow-y: auto;
+
+	background: #FFFFFF;
+	border-width: 0 4px;
+	border-style: solid;
 }
 
 .list-item, .group-name{
@@ -74,7 +79,10 @@ body{
 }
 
 .group-name{
+	width: 100%;
 	height: fit-content;
+
+	display: block;
 
 	font-size: 18px;
 	font-weight: bolder;
@@ -94,7 +102,7 @@ body{
 	background: #E8E8E8;
 }
 
-.list-item > p.title{
+.list-item > .title{
 	max-width: 100%;
 	max-height: 44px;
 	width: fit-content;
@@ -110,7 +118,7 @@ body{
 	background: transparent;
 }
 
-.list-item > p.descriptions{
+.list-item > .descriptions{
 	width: fit-content;
 	height: fit-content;
 	max-height: 44px;
@@ -125,6 +133,8 @@ body{
 	background: transparent;
 	line-clamp: 2;
 	-webkit-line-clamp: 2;
+
+	overflow: hidden;
 }
 
 #details-pane{

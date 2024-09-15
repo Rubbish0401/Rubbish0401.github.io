@@ -83,7 +83,7 @@ function showDescription(data) {
 	list = document.getElementById(ID_LIST);
 	details = document.getElementById(ID_DETAILS);
 
-	list.style.background = `hsl(${themeHue}deg, 35%, 75%)`;
+	list.style.borderColor = `hsl(${themeHue}deg, 35%, 75%)`;
 
 	let request = new XMLHttpRequest();
 	request.onreadystatechange = function () {
@@ -93,7 +93,7 @@ function showDescription(data) {
 			for (let i = 1; i < listData.length; i++) {
 				let group = listData[i];
 
-				let groupName = document.createElement("p");
+				let groupName = document.createElement("span");
 				groupName.classList.add("group-name");
 				groupName.innerText = group.name;
 				list.appendChild(groupName);
@@ -110,11 +110,11 @@ function showDescription(data) {
 						back.classList.add("show-details");
 					});
 
-					let title = document.createElement("p");
+					let title = document.createElement("span");
 					title.classList.add("title");
 					title.innerText = itemData.title;
 
-					let descriptions = document.createElement("p");
+					let descriptions = document.createElement("span");
 					descriptions.classList.add("descriptions");
 					descriptions.innerText = itemData.descriptions.replace(/<(".*?"|'.*?'|[^'"])*?>/g, "");
 
