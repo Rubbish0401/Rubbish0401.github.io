@@ -6,6 +6,8 @@
 	padding: 0;
 
 	box-sizing: border-box;
+	touch-action: none;
+	overflow: hidden;
 }
 
 *::-webkit-scrollbar{
@@ -26,9 +28,10 @@ body{
 
 	padding: 0;
 	margin: 0;
+}
 
-	overflow: hidden;
-	touch-action: none;
+body *{
+	
 }
 
 #back{
@@ -44,9 +47,6 @@ body{
 
 	padding: 0;
 	margin: 0;
-
-	overflow: hidden;
-	touch-action: none;
 }
 
 #list-pane{
@@ -94,8 +94,6 @@ body{
 
 	display: flex;
 	flex-direction: column;
-
-	overflow: hidden;
 }
 
 .list-item:hover{
@@ -133,8 +131,6 @@ body{
 	background: transparent;
 	line-clamp: 2;
 	-webkit-line-clamp: 2;
-
-	overflow: hidden;
 }
 
 #details-pane{
