@@ -171,8 +171,8 @@ body{
 	width: auto;
 	height: 44px;
 	aspect-ratio: 1;
-	
-	border: 2px solid #FFFFFF;
+
+	padding: 4px;
 
 	user-select: none;
 }
