@@ -1,0 +1,250 @@
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1" />
+	<meta charset="utf-8" />
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+	<!-- External Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Tangerine:wght@400;700&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+	<div id="pane">
+		<div id="display">
+			<span id="text">
+				ねぇ見えてる？見えてる？<br>ゴミマロってんだけど
+			</span>
+		</div>
+		<div id="footer">
+			<img id="icon" src="https://rubbish0401.github.io/TimeDiffDisplay/images/png/rounded_paper.png">
+		</div>
+	</div>
+
+	<style>
+		* {
+			font-family: "Noto Sans JP", "Open Sans";
+			scrollbar-width: 0;
+
+			margin: 0;
+			padding: 0;
+
+			box-sizing: border-box;
+			touch-action: none;
+			overflow: hidden;
+		}
+
+		*::-webkit-scrollbar {
+			display: none;
+		}
+
+		a {
+			color: #808080;
+			font-weight: bold;
+			text-decoration: none;
+		}
+
+		body {
+			max-width: 100vw;
+			max-height: 100vh;
+			width: 100vw;
+			height: 100vh;
+
+			padding: 0;
+			margin: 0;
+		}
+
+		body * {
+			touch-action: auto;
+		}
+
+		#pane {
+			max-width: 100%;
+			max-height: 100%;
+			width: auto;
+			height: auto;
+			aspect-ratio: calc(16 / 9);
+
+			margin: auto;
+			padding: 16px;
+
+			background: hsl(135, 75%, 75%);
+		}
+
+		#display {
+			max-width: 100%;
+			width: auto;
+			height: auto;
+			aspect-ratio: 2;
+
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: center;
+			align-items: center;
+
+			margin: auto;
+			padding: 16px;
+
+			font-size: 36px;
+			color: #5f6368;
+
+			background: #FFFFFF;
+			border-radius: 16px;
+			border: 1px solid #000000;
+		}
+
+		#footer {
+			max-width: 100%;
+			width: auto;
+			height: auto;
+			aspect-ratio: calc(16);
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			padding: 4px;
+		}
+
+		#icon {
+			width: fit-content;
+			height: 100%;
+		}
+	</style>
+
+	<script>
+		// Constants
+		const Unit = {
+			MILLI_SECOND: 1,
+			SECOND: 1000,
+			MINUTE: 60 * 1000,
+			HOUR: 60 * 60 * 1000,
+			DAY: 24 * 60 * 60 * 1000,
+			WEEK: 7 * 24 * 60 * 60 * 1000,
+			MONTH: 30 * 24 * 60 * 60 * 1000, // 30 days
+			YEAR: 365 * 24 * 60 * 60 * 1000
+		};
+
+		// Functions
+		function fillChars(text = "", length = 0, char = "0", direction = 0) {
+			text = text.toString();
+
+			let filler = "";
+			for (let i = 0; i < Math.max(0, length - text.length); i++) filler += char;
+
+			return (direction == 0 ? filler : "") + text + (direction == 1 ? filler : "");
+		}
+
+		function formatDateToText(date) {
+			return `${date.getFullYear()}年 ` +
+				`${fillChars(String(date.getMonth() + 1), 2, "0")}月` +
+				`${fillChars(String(date.getDate()), 2, "0")}日 ` +
+				`${fillChars(String(date.getHours()), 2, "0")}:${fillChars(String(date.getMinutes()), 2, "0")}:${fillChars(String(date.getSeconds()), 2, "0")}`;
+		}
+
+		function formatTime(milliseconds) {
+			let d_days = Math.floor(milliseconds / Unit.DAY);
+			let d_hours = Math.floor((milliseconds % Unit.DAY) / Unit.HOUR);
+			let d_minutes = Math.floor((milliseconds % Unit.HOUR) / Unit.MINUTE);
+			let d_seconds = Math.floor((milliseconds % Unit.MINUTE) / Unit.SECOND);
+			let d_milliseconds = milliseconds % Unit.SECOND;
+
+			return {
+				milliseconds: d_milliseconds,
+				seconds: d_seconds,
+				minutes: d_minutes,
+				hours: d_hours,
+				days: d_days,
+			};
+		}
+
+		function timeToText(milliseconds) {
+			let time = formatTime(milliseconds);
+
+			let t_seconds = `${fillChars(time.seconds, 2, "0")}s`;
+			let t_minutes = `${fillChars(time.minutes, 2, "0")}m`;
+			let t_hours = `${fillChars(time.hours, 2, "0")}h`;
+			let t_days = `${fillChars(time.days, 3, "0")}day${time.days > 1 ? "s" : ""}`;
+
+			return {
+				days: t_days,
+				time: `${t_hours}${t_minutes}${t_seconds}`,
+			};
+		}
+
+		async function takesScreenshot(target = document.documentElement, width = window.innerWidth, height = window.innerHeight, download = false) {
+			let now = new Date();
+
+			let canvas = await domToCanvas(target, width, height);
+			if (download) downloadByURL(canvas.toDataURL("image/png"), `screenshot_${now.getFullYear()}${now.getMonth() + 1}${now.getDate()}${now.getHours()}${now.getMinutes()}${now.getSeconds()}.png`);
+
+			return canvas;
+		}
+
+		async function domToCanvas(dom, width = 1920, height = 1080) {
+			let result;
+
+			await html2canvas(dom, {
+				windowWidth: width,
+				windowHeight: height,
+				width: width,
+				height: height,
+				scale: 1,
+			}).then(canvas => {
+				result = canvas;
+			});
+
+			return result;
+		}
+
+		async function canvasToFile(canvas) {
+			let file;
+			canvas.toBlob(blob => {
+				file = new File([blob], "", {
+					type: blob.type,
+				})
+			});
+
+			return file;
+		}
+
+		function downloadByURL(url, filename = "undefined") {
+			let anchor = document.createElement("a");
+			anchor.href = url;
+			anchor.download = filename;
+			anchor.click();
+			anchor.remove();
+		}
+
+		function makeFullscreen(target = document.documentElement, toggle) {
+			if (toggle == null) toggle = document.fullscreenElement !== null;
+
+			if (toggle) {
+				target.requestFullscreen({ navigationUI: "show" })
+					.then(() => { })
+					.catch(err => {
+						console.log(err);
+					});
+			} else {
+				document.exitFullscreen();
+			}
+		}
+
+		/* Share */
+		async function share(title, text, url, files) {
+			await navigator.share({
+				title: title,
+				text: text,
+				url: url,
+				files: files,
+			});
+		}
+	</script>
+</body>
+
+</html>
