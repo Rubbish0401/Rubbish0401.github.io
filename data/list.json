@@ -19,6 +19,23 @@
 		"name": "Services",
 		"items": [
 			{
+				"title": "Random String Generator",
+				"icon": "",
+				"descriptions": "ランダムな文字列を生成するアプリケーション。<br>生成した文字列をクリップボードにコピーしたり、txtファイルとして保存したりもできる。<br>パスワードを生成する目的で使っていたサイトをもう少し使い勝手のよい状態にしたくて作った。使えなくもない。",
+				"links": [
+					{
+						"title": "Random String Generator",
+						"url": "https://rubbish0401.github.io/RandomStringGenerator/"
+					},
+
+					{
+						"title": "GitHub",
+						"url": "https://github.com/Rubbish0401/RandomStringGenerator"
+					}
+				]
+			},
+
+			{
 				"title": "Time Diff Display",
 				"icon": "",
 				"descriptions": "指定した時間と今の差を表示するアプリケーション。",
