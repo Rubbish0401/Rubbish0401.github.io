@@ -36,6 +36,23 @@
 			},
 
 			{
+				"title": "Gomimaro Maker",
+				"icon": "",
+				"descriptions": "某なにマロみたいな画像を作ることができるアプリケーション。デザインといい処理といい、雑な実装をしたために不具合が多発しそうな予感。<br>気が向けば順次直していくつもりです。とりあえずそれっぽい機能が完成して一安心。",
+				"links": [
+					{
+						"title": "Gomimaro Maker",
+						"url": "https://rubbish0401.github.io/GomimaroMaker/"
+					},
+
+					{
+						"title": "GitHub",
+						"url": "https://github.com/Rubbish0401/GomimaroMaker"
+					}
+				]
+			},
+
+			{
 				"title": "Time Diff Display",
 				"icon": "",
 				"descriptions": "指定した時間と今の差を表示するアプリケーション。",
