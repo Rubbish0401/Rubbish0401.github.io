@@ -68,10 +68,19 @@
 				]
 			},
 			{
-				"title": "数値カウンター",
+				"title": "Advanced Counter",
 				"icon": "",
-				"descriptions": "未開発<br>クリックでカウントできるようにする？カウントダウンタイプもありかも。",
-				"links": []
+				"descriptions": "未開発 → 完成(イマココ)<br>「数値カウンター」の名でリストにおいていました。<br>数値を数えられるだけ。画面全体のクリックと専用のボタンで数値の増減をコントロールできる。",
+				"links": [
+					{
+						"title": "Advanced Counter",
+						"url": "https://rubbish0401.github.io/AdvancedCounter/"
+					},
+					{
+						"title": "GitHub",
+						"url": "https://github.com/Rubbish0401/AdvancedCounter"
+					}
+				]
 			},
 			{
 				"title": "予定表つくるんじゃー",
